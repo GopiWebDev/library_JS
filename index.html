@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Book Library</h1>
+      <button class="round" id="new-book-btn">+</button>
+    </header>
+    <main>
+      <div class="modal view">
+        <form id="book-form">
+          <h3>Add new book</h3>
+          <input type="text" id="title" required placeholder="Title" />
+          <input type="text" id="author" required placeholder="Author" />
+          <input type="number" id="pages" required placeholder="Pages" />
+          <div class="read-box">
+            <label for="read">Have you read it?</label>
+            <input class="checkbox" type="checkbox" id="read" />
+          </div>
+          <input type="submit" value="Add Book" id="submit" />
+        </form>
+      </div>
+      <div id="library">
+        <div class="card"></div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
