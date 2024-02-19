@@ -18,21 +18,46 @@
       <button class="round" id="new-book-btn">+</button>
     </header>
     <main>
-      <div class="modal view">
-        <form id="book-form">
-          <h3>Add new book</h3>
-          <input type="text" id="title" required placeholder="Title" />
-          <input type="text" id="author" required placeholder="Author" />
-          <input type="number" id="pages" required placeholder="Pages" />
+      <dialog class="modal" id="top2center">
+        <form method="dialog" id="book-form">
+          <h3 style="font-size: 1.8em">Add new book</h3>
+          <input
+            type="text"
+            id="title"
+            required
+            placeholder="Title"
+            maxlength="20"
+          />
+          <input
+            type="text"
+            id="author"
+            required
+            placeholder="Author"
+            maxlength="20"
+          />
+          <input
+            type="number"
+            id="pages"
+            required
+            placeholder="Pages"
+            max="21450"
+          />
           <div class="read-box">
             <label for="read">Have you read it?</label>
             <input class="checkbox" type="checkbox" id="read" />
           </div>
           <input type="submit" value="Add Book" id="submit" />
         </form>
-      </div>
+        <button id="close">X</button>
+      </dialog>
       <div id="library">
-        <div class="card"></div>
+        <div class="card">
+          <h2>Rich Dad, Poor Dad</h2>
+          <h3>by: Rowan Akatsuki</h3>
+          <h3>Pages:</h3>
+          <button>Read</button>
+          <button>Remove</button>
+        </div>
       </div>
     </main>
     <script src="app.js"></script>

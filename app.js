@@ -13,7 +13,12 @@ const render = () => {
   for (let i = 0; i < myLibrary.length; i++) {
     let book = myLibrary[i];
     let bookEl = document.createElement("div");
-    bookEl.innerHTML = `<p>${book.title}</p>`;
+    bookEl.innerHTML = `<div class="card">
+    <h2>"${book.title}"</h2>
+    <h3>by: ${book.author}</h3>
+    <h3>Pages: ${book.pages}</h3>
+    <button>Read</button>
+    <button>Remove</button>`;
     libraryEl.appendChild(bookEl);
   }
 };
@@ -29,10 +34,10 @@ function addBookToLibrary() {
 }
 
 const newBookBtn = document.querySelector("#new-book-btn");
+let dialog = document.querySelector(".modal");
 
 newBookBtn.addEventListener("click", () => {
-  let modal = document.querySelector(".modal");
-  modal.classList.toggle("view");
+  dialog.show();
 });
 
 const addBook = document.querySelector("#book-form");
@@ -40,4 +45,10 @@ const addBook = document.querySelector("#book-form");
 addBook.addEventListener("submit", (e) => {
   e.preventDefault();
   addBookToLibrary();
+});
+
+const close = document.querySelector("#close");
+
+close.addEventListener("click", () => {
+  dialog.close();
 });
