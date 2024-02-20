@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 2em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 header h1 {
@@ -167,4 +168,12 @@ dialog#top2center[open] {
   background-color: #d22b2b;
   color: white;
   cursor: pointer;
+}
+
+.readGreen {
+  background: #9fff9c;
+}
+
+.readRed {
+  background: #ff7070;
 }
