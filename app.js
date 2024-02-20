@@ -64,14 +64,25 @@ addBook.addEventListener("submit", (e) => {
   // prevent default behaviour
   e.preventDefault();
   addBookToLibrary();
-  dialog.close();
+  closeDialog();
 });
 
 // button to close dialog box i.e red x btn
 const close = document.querySelector("#close");
-close.addEventListener("click", () => {
+close.addEventListener("click", closeDialog);
+
+function closeDialog() {
+  let title = document.querySelector("#title");
+  let author = document.querySelector("#author");
+  let pages = document.querySelector("#pages");
+  let read = document.querySelector("#read");
+
+  title.value = "";
+  author.value = "";
+  pages.value = "";
+  read.checked = false;
   dialog.close();
-});
+}
 
 // function to remove one card
 function removeBook(index) {
