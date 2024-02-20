@@ -94,6 +94,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+/* dialog css */
 .modal {
   position: fixed;
   z-index: 1;
@@ -112,11 +113,12 @@ dialog {
   border: none;
 }
 
-dialog#top2center[open] {
-  animation: myTop2Center 0.5s;
+/* dialog open animation */
+dialog#animate[open] {
+  animation: openDialog 0.5s;
 }
 
-@keyframes myTop2Center {
+@keyframes openDialog {
   from {
     transform: scale(0);
   }
@@ -125,6 +127,9 @@ dialog#top2center[open] {
   }
 }
 
+/* dialog close animation */
+
+/* library section css */
 #library {
   display: grid;
   justify-items: center;
