@@ -1,3 +1,11 @@
+const overlay = document.querySelector("#overlay");
+
+overlay.addEventListener("click", () => {
+  closeDialog();
+  dialog.classList.remove("open");
+  overlay.classList.remove("open");
+});
+
 const myLibrary = [];
 
 class Book {
@@ -56,6 +64,8 @@ const newBookBtn = document.querySelector("#new-book-btn");
 let dialog = document.querySelector(".modal");
 
 newBookBtn.addEventListener("click", () => {
+  dialog.classList.add("open");
+  overlay.classList.add("open");
   dialog.show();
 });
 
@@ -82,6 +92,8 @@ function closeDialog() {
   author.value = "";
   pages.value = "";
   read.checked = false;
+  dialog.classList.remove("open");
+  overlay.classList.remove("open");
   dialog.close();
 }
 
